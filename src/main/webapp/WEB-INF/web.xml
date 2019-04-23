@@ -42,4 +42,16 @@
 	    <servlet-name>ValiderCommandeServlet</servlet-name>  
 	    <url-pattern>/commande-valider</url-pattern>    
 	</servlet-mapping>
+	
+	
+	
+	<servlet>
+	    <servlet-name>RecetteServlet</servlet-name>  
+	    <servlet-class>web.RecetteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>RecetteServlet</servlet-name>  
+	    <url-pattern>/recette</url-pattern>    
+	</servlet-mapping>
 </web-app> 

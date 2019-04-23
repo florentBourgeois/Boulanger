@@ -24,31 +24,21 @@
 
     <h1>Boulangerie ${boulangerie.nom}</h1>
 
+
+    <h1>Recette</h1>
+
     
-    
-    <table style="width:80%" align="center">
-    	<c:set var="i" value="0" scope="page"/>
-    	<tr>
-        <c:forEach items ="${boulangerie.produits}" var="p">
-			<th>
-				<img src='${p.img}' height="150" />
-                <p>${p.nom} : ${p.valeur} euros</p>
-               	<form method="post" action="/commandes-ajouter">
-               		<input type = "hidden" name='produit' value='${p.nom}'>
-               		<input type='submit' value='commander'>
-               	</form>                
-            </th>
-            <c:set var="i" value="${i + 1}" scope="page"/>
-            <c:if test = "${i >3 }">
-         		</tr><tr>
-      		</c:if>
+    <ul>
+        <c:forEach items ="${commandes}" var="c">
+            <li>
+                    <p>${c}</p>
+            </li>
         </c:forEach> 
-        </tr>
-    
+    </ul>
+
+    <b>Total : ${totalRecettes}</b>
 
 
-    
-    
 </div>
 
 

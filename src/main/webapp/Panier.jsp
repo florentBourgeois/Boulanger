@@ -19,7 +19,7 @@
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="/accueil">Accueil</a>
         <a class="navbar-brand" href="/commandes-ajouter">Panier</a>
-        <a class="navbar-brand" href="/commande-payees">Recettes</a>
+        <a class="navbar-brand" href="/recette">Recettes</a>
     </nav>
 
     <h1>Boulangerie ${boulangerie.nom}</h1>
