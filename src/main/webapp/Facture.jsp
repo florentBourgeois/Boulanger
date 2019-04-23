@@ -25,25 +25,19 @@
     <h1>Boulangerie ${boulangerie.nom}</h1>
 
 
-    <p>${message}</p>
-
-
-    <h1>Votre commande</h1>
+    <h1>Facture</h1>
 
     
     <ul>
         <c:forEach items ="${commande.produits}" var="p">
             <li>
-                    <p>${p.nom} vendu au prix de ${p.valeur}</p>
+                    <p>${p.nom} : ${p.valeur}</p>
             </li>
         </c:forEach> 
     </ul>
 
     <b>Total : ${total}</b>
 
-    <form method="post" action="/commande-valider">
-        <input type="submit" value="payer">
-    </form>
 
 </div>
 

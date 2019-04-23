@@ -13,11 +13,22 @@ import model.Boulangerie;
 import model.Produit;
 
 
-@WebServlet("/accueil" )
 public class AjouterCommandeServlet extends HttpServlet {
 	
 	
 	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		Boulangerie boulangerie = (Boulangerie)this.getServletConfig().getServletContext().getAttribute("boulangerie"); 
+		
+		if(boulangerie == null) {
+			req.getRequestDispatcher("/accueil").forward(req,resp);
+		}
+		
+		req.setAttribute("commande",boulangerie.getCommandeEnCour());
+        req.setAttribute("total",boulangerie.getCommandeEnCour().calculerPrix());
+		req.getRequestDispatcher("Panier.jsp").forward(req,resp);
+	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -43,8 +54,8 @@ public class AjouterCommandeServlet extends HttpServlet {
 	        
 	        req.setAttribute("message", message);
 	        req.setAttribute("commande",boulangerie.getCommandeEnCour());
+	        req.setAttribute("total",boulangerie.getCommandeEnCour().calculerPrix());
 			req.getRequestDispatcher("Panier.jsp").forward(req,resp);
-
 
 		}
 		 			

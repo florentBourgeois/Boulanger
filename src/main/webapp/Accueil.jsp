@@ -17,9 +17,9 @@
 <div class="container">
 
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="/Boulanger/accueil">Accueil</a>
-        <a class="navbar-brand" href="/Boulanger/commande-encour">Panier</a>
-        <a class="navbar-brand" href="/Boulanger/commande-payees">Recettes</a>
+        <a class="navbar-brand" href="/accueil">Accueil</a>
+        <a class="navbar-brand" href="/commandes-ajouter">Panier</a>
+        <a class="navbar-brand" href="/commande-payees">Recettes</a>
     </nav>
 
     <h1>Boulangerie ${boulangerie.nom}</h1>
@@ -31,9 +31,9 @@
     	<tr>
         <c:forEach items ="${boulangerie.produits}" var="p">
 			<th>
-				<img src=${p.img}/>
+				<img src='${p.img}' height="150" />
                 <p>${p.nom} : ${p.valeur} euros</p>
-               	<form method="post" action="/Boulanger/commandes-ajouter">
+               	<form method="post" action="/commandes-ajouter">
                		<input type = "hidden" name='produit' value='${p.nom}'>
                		<input type='submit' value='commander'>
                	</form>                
@@ -45,6 +45,8 @@
         </c:forEach> 
         </tr>
     
+
+
     
     
 </div>

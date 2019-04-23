@@ -17,19 +17,29 @@
 	    <servlet-name>AccueilServlet</servlet-name>  <!-- nom de la servlet qui répond -->
 	    <url-pattern>/accueil</url-pattern>      <!-- URL à laquelle la servlet répond -->
 	</servlet-mapping>
-	
+
+
 
 <!-- Déclaration au serveur applicatif d'une nouvelle servlet-->
 	<servlet>
-	    <servlet-name>AjouterCommandeServlet</servlet-name>  <!-- nom donné à la servlet -->
-	    <servlet-class>web.AjouterCommandeServlet</servlet-class> <!-- classe qui code cette servlet -->
+	    <servlet-name>AjouterCommandeServlet</servlet-name> 
+	    <servlet-class>web.AjouterCommandeServlet</servlet-class> 
 	</servlet>
 
-<!-- Configuration de l'URL de la servlet -->
 	<servlet-mapping>
-	    <servlet-name>AjouterCommandeServlet</servlet-name>  <!-- nom de la servlet qui répond -->
-	    <url-pattern>/commandes-ajouter</url-pattern>      <!-- URL à laquelle la servlet répond -->
+	    <servlet-name>AjouterCommandeServlet</servlet-name>
+	    <url-pattern>/commandes-ajouter</url-pattern>      
 	</servlet-mapping>
 
 
+
+	<servlet>
+	    <servlet-name>ValiderCommandeServlet</servlet-name>  
+	    <servlet-class>web.ValiderCommandeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	    <servlet-name>ValiderCommandeServlet</servlet-name>  
+	    <url-pattern>/commande-valider</url-pattern>    
+	</servlet-mapping>
 </web-app> 

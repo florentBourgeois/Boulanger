@@ -12,7 +12,6 @@ import model.Boulangerie;
 import model.Produit;
 
 
-@WebServlet("/accueil" )
 public class AccueilServlet extends HttpServlet {
 	
 	private Boulangerie boulangerie;
@@ -38,5 +37,4 @@ public class AccueilServlet extends HttpServlet {
 		
 	}
 	
-
 }
